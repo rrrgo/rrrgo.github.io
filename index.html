@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+---
+layout: default
+title: freemindcore
+---
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-  </body>
-</html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <h1>Prominent Open Source Projects</h1>
+  <ul class="posts">
+    <li><a href="http://github.com/github/gollum/">Gollum:</a> A simple, Git-powered wiki with a sweet API and local frontend.</li>
+    <li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
+    <li><a href="http://github.com/mojombo/god/">God:</a> Ruby process monitoring framework with easy extensibility.</li>
+    <li><a href="http://github.com/mojombo/grit/">Grit:</a> Object oriented Ruby bindings for Git (used by GitHub).</li>
+    <li><a href="http://github.com/mojombo/ernie/">Ernie:</a> Ruby/Erlang Hybrid BERT-RPC server.</li>
+    <li><a href="http://github.com/mojombo/proxymachine/">ProxyMachine:</a> Layer 7 routing proxy in Ruby with Event Machine.</li>
+    <li><a href="http://github.com/mojombo/primer/">Primer:</a> JavaScript based Flash-like API layered on top of Canvas.</li>
+    <li><a href="http://github.com/mojombo/chronic/">Chronic:</a> Ruby natural language date/time parser.</li>
+  </ul>
+</div>
