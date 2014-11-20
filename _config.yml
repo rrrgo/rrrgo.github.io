@@ -7,8 +7,8 @@ defaults:
       layout: "my-site"
   -
     scope:
-      path: "projects"
-      type: "pages"
+      path: ""
+      type: "defaults"
     values:
-      layout: "project" # overrides previous default layout
-      author: "Mr. Hyde"
+      layout: "bootstraps" # overrides previous default layout
+      author: "Bootstraps.com"
